@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageButton
+        android:id="@+id/imageScissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Guess"
+        app:layout_constraintEnd_toStartOf="@id/imageRock"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txv"
+        app:srcCompat="@drawable/scissors" />
+
+    <ImageButton
+        android:id="@+id/imageRock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Guess"
+        app:layout_constraintStart_toEndOf="@id/imageScissors"
+        app:layout_constraintEnd_toStartOf="@id/imagePaper"
+        app:layout_constraintTop_toBottomOf="@id/txv"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageButton
+        android:id="@+id/imagePaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Guess"
+        app:layout_constraintStart_toEndOf="@id/imageRock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txv"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageRock"
+        app:srcCompat="@drawable/title" />
+
+    <TextView
+        android:id="@+id/txvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="顯示猜拳結果"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPhone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
